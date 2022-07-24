@@ -1,0 +1,95 @@
+.Header {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 1440px;
+  height: 60px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #777777;
+  position: relative;
+}
+
+.schoolSelector {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 116px;
+  padding: 4px 12px;
+  gap: 4px;
+  left: 221px;
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  &__pointer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.options {
+  text-transform: uppercase;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #777777;
+    margin: 6px 12px;
+  }
+}
+
+.is-active {
+  margin: 0;
+  padding: 6px 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: red;
+}
+
+.signup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  left: 1340px;
+
+  &__photo{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__pointer_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.triangle-grey {
+  width: 10px;
+  height: 5px;
+}

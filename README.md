@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+RESULT LINK: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TASK
+Figma: https://www.figma.com/file/ARZLeAI1PWBYCpYUYaGrUq/Memoria-Press-App-Copy?node-id=284%3A9762
 
-## Available Scripts
+Test task description:
+Prepare react app.
+The UI part must include only view functionality.
+Use Redux/Redux toolkit.
+Request all data from the endpoint below.
+Pagination and sorting is an important part and have to be completed.
+Search must be fully functional.
+Headers of the page can be hardcoded in the UI.
+Click on the row of the student to collapse the internal table with the test results.
+Export CSV button must generate a .csv file with data displayed in the table.
 
-In the project directory, you can run:
+Task explanation: 
+https://share.vidyard.com/watch/EjXFfccmLfYAwKQxMPpAp4?
 
-### `npm start`
+Endpoint to get data:
+URL: https://test-task-j.herokuapp.com/data
+HTTP: GET
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+REQUEST QUERY PARAMS:
+page: int (REQUIRED)
+size: int (REQUIRED)
+search: string
+sortBy: string from [‘name’, ‘class’, ‘score’, ‘speed’]
+sortDir: int from [-1, 1]
 
-### `npm test`
+sortBy and sortDir work only together.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+RESPONSE EXAMPLE:
+{
+  totalPages: 1,
+  data: [
+    {
+      name: 'Nicole Kidmann',
+      id: 123456,
+      class: '1C',
+      score: '76%',
+      speed: 'Below Expected',
+      parents: ['Antony Kidmann', 'Janelle Kidmann'],
+      tests: [
+        {
+          label: 'Average 1-100',
+          score: 95,
+          speed: '1h 12m 00s',
+          total: 100,
+          expSpeed: "1h 00m 00s",
+          concept: 'Multiplication',
+          date: 'APR 30 2021',
+          abcent: false
+        },
+        {
+          label: 'Average 1-10',
+          score: null,
+          speed: null,
+          total: 10,
+          expSpeed: "0h 30m 00s",
+          concept: 'Multiplication',
+          date: 'APR 30 2021',
+          absent: true
+        }
+      ]
+    }
+  ]
+}
