@@ -13,6 +13,7 @@ export const PeopleTable:React.FC<Props> = React.memo(({ people }) => {
       <table className="table">
         <thead>
           <tr>
+            <th><input type="checkbox" readOnly /></th>
             <th>Name</th>
             <th>ID</th>
             <th>Class</th>

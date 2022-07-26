@@ -9,6 +9,7 @@ type Props = {
 export const PersonRow:React.FC<Props> = React.memo(({ person }) => {
   return (
     <tr>
+      <td><input type="checkbox" readOnly /></td>
       <td>{person.name}</td>
       <td>{person.id}</td>
       <td>{person.class}</td>

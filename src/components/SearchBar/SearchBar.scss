@@ -1,0 +1,71 @@
+.SearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 133px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #5B5B5B;
+    margin-left: -133px;
+  }
+
+  &__export {
+    display: flex;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #C0C0C0;
+    cursor: pointer;
+  }
+}
+
+.input {
+  width: 500px;
+  height: 32px;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F2F2F2;
+  box-sizing: border-box;
+
+  &__field {
+    outline: none;
+    border-color: transparent;
+    width: 447px;
+    height: 20px;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #7c7c7c;
+    background: #F2F2F2;
+    cursor: pointer;
+  }
+
+  &__button {
+    border: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    cursor: pointer;
+
+    &--sizes {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.exportImg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
