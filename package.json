@@ -1,6 +1,7 @@
 {
-  "name": "log_template",
+  "name": "log_data",
   "version": "0.1.0",
+  "homepage": "https://Yaroslav-Kononenko.github.io/log_data/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -22,10 +23,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "mate-scripts deploy",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^4.0.0"
   }
 }
