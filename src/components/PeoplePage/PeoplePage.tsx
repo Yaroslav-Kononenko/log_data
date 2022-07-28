@@ -15,7 +15,10 @@ export const PeoplePage:React.FC = React.memo(() => {
 
   return (
     <div className="PeoplePage">
-      <SearchBar users = {people} setPeople = {setPeople}/>
+      <SearchBar 
+        users = {people} 
+        setPeople = {setPeople}
+      />
       <PeopleTable people = {people} />
     </div>
   );

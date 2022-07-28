@@ -3,7 +3,7 @@
 export interface Tests {
   abcent: boolean,
   concept: string,
-  data: string,
+  date: string,
   expSpeed: string,
   label: string,
   score: number,

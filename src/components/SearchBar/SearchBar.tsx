@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchBar.scss';
 import { PersonFromServer } from '../../react-app-env';
 import searchButton from './searchbar_logo.svg';
@@ -25,11 +25,14 @@ export const SearchBar: React.FC<Props> = ({ users, setPeople }) => {
 
     return nameFilter || idFilter || parentFilter;
   };
+
+  useEffect(() => {
+    getPeople()
+      .then(response => setPeople(response.data.filter(filterFunc)));
+  }, [ listOfUsers ]);
   
   const filterTodosByTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
     setListofUsers(event.target.value);
-    getPeople()
-      .then(response => setPeople(response.data.filter(filterFunc)));
   };
 
   return (

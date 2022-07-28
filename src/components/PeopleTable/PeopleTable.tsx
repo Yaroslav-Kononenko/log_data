@@ -20,6 +20,7 @@ export const PeopleTable:React.FC<Props> = React.memo(({ people }) => {
             <th>Av.Score, %</th>
             <th>Av.Speed</th>
             <th>Parents</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
