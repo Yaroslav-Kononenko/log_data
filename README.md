@@ -1,4 +1,4 @@
-RESULT LINK: 
+RESULT LINK:  [DEMO LINK](https://Yaroslav-Kononenko.github.io/log_data/)
 
 TASK
 Figma: https://www.figma.com/file/ARZLeAI1PWBYCpYUYaGrUq/Memoria-Press-App-Copy?node-id=284%3A9762
