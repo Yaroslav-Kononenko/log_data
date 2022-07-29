@@ -61,8 +61,7 @@ export const ExtraInfoTable:React.FC<Props> = React.memo(({ people }) => {
             <td></td>
             <td >AVERAGE</td>
 
-            <td 
-              className={classnames(
+            <td className={classnames(
                 {'blue': color_score === 'blue'},
                 {'green': color_score === 'green'},
                 {'yellow': color_score === 'yellow'},

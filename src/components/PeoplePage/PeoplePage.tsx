@@ -19,7 +19,7 @@ export const PeoplePage:React.FC = React.memo(() => {
         users = {people} 
         setPeople = {setPeople}
       />
-      <PeopleTable people = {people} />
+      <PeopleTable people = {people} setPeople={setPeople}/>
     </div>
   );
 });

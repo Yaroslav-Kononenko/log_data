@@ -21,6 +21,10 @@ export const UserInfoRow:React.FC<Props> = React.memo(({ user, index = 0}) => {
     color_score = 'orange';
   }
 
+  if (!user.score) {
+    color_score = '';
+  }
+
   return (
     <tr>
       <td>{index + 1}</td>
