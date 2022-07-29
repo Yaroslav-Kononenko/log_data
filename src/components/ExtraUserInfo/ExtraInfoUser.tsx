@@ -68,18 +68,46 @@ export const ExtraUserInfo: React.FC<Props> = ({ users }) => {
 
       <div className="ExtraUserInfo__description description">
         <div className="description__score">
-          <span>score</span>
-          <span>90%+ Accuracy</span>
-          <span>80 - 89% Accuracy</span>
-          <span>50 - 79% Accuracy</span>
-          <span>below 50% Accuracy</span>
+          <span className="lightgrey">score</span>
+
+          <div className="blue">
+            <div className="round blue-bg"></div>
+            <span>90%+ Accuracy</span>
+          </div>
+          
+          <div className="green">
+            <div className="round green-bg"></div>
+            <span>80 - 89% Accuracy</span>
+          </div>
+
+          <div className="yellow">
+            <div className="round yellow-bg"></div>
+            <span>50 - 79% Accuracy</span>
+          </div>
+
+          <div className="orange">
+            <div className="round orange-bg"></div>
+            <span>below 50% Accuracy</span>
+          </div>
         </div>
 
         <div className="description__speed">
-          <span>speed</span>
-          <span>above expected</span>
-          <span>as expected</span>
-          <span>below expected</span>
+          <span className="lightgrey">speed</span>
+
+          <div className="blue">
+            <div className="round blue-bg"></div>
+            <span>above expected</span>
+          </div>
+          
+          <div className="green">
+            <div className="round green-bg"></div>
+            <span>as expected</span>
+          </div>
+
+          <div className="orange">
+            <div className="round orange-bg"></div>
+            <span>below expected</span>
+          </div>
         </div>
       </div>
 

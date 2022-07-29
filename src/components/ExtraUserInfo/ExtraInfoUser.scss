@@ -1,3 +1,5 @@
+@import '../../utils/variables';
+
 .ExtraUserInfo {
   box-sizing: border-box;
   width: 1300px;
@@ -95,4 +97,59 @@
       box-shadow: 0px 0px 8px rgb(84, 84, 84);
     }
   }
+}
+.description__score {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  &>:nth-child(n) {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.description__speed {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  &>:nth-child(n) {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.round {
+  content: ""; 
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.blue-bg {
+  background-color: $rate-color-blue;
+}
+
+.green-bg {
+  background-color: $rate-color-green;
+}
+
+.yellow-bg {
+  background-color: $rate-color-yellow;
+}
+
+.orange-bg {
+  background-color: $rate-color-orange;
 }
