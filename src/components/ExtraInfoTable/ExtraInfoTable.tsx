@@ -50,7 +50,7 @@ export const ExtraInfoTable:React.FC<Props> = React.memo(({ people }) => {
         </thead>
         <tbody>
           {testsArray?.map((person, index) => (
-            <UserInfoRow user={person} index={index}/>
+            <UserInfoRow user={person} index={index} key={index}/>
           ))}
         </tbody>
       </table>

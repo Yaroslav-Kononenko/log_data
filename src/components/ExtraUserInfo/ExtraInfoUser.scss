@@ -85,16 +85,10 @@
     width: 32px;
     height: 32px;
     border: none;
-    transition: 0.25s;
+    transition: 0.2s all;
 
     &:hover {
-      border-radius: 50%;
-      box-shadow: 0px 0px 5px rgb(116, 116, 116);
-    }
-
-    &:active {
-      border-radius: 50%;
-      box-shadow: 0px 0px 8px rgb(84, 84, 84);
+      transform: scale(1.4);
     }
   }
 }

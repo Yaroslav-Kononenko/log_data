@@ -1,7 +1,6 @@
 .table {
   width: 100%;
-  margin: 0 auto 16px;
-  padding: 0 0 40px;
+  margin: 0 auto;
   border-spacing: 24px 0;
   overflow: visible;
   font-weight: 400;
@@ -12,13 +11,12 @@
   thead tr th {
     margin-right: 24px;
     text-align: left;
+    font-weight: 400;
   }
 
   tr {
     &:nth-of-type(even) {
       background-color: #F9F9F9;
-      filter: drop-shadow(0px 1px 4px #F2F2F2);
-      z-index: 1;
     }
   }
 
@@ -39,11 +37,11 @@
   }
 
   th:nth-child(3) {
-    width: 96px;
+    width: 84px;
   }
 
   th:nth-child(4) {
-    width: 40px;
+    width: 46px;
   }
 
   th:nth-child(5) {
@@ -63,11 +61,13 @@
   }
 }
 
-.table-name {
+.table-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.table-name {
   &__button {
     width: 16px;
     height: 16px;
@@ -75,6 +75,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    transition: 0.2s all;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  
+    &:active {
+      transform: scale(2);
+    }
+  }
+}
+
+.table-id {
+  &__img {
+    height: 16px;
+    border: none;
+    background-color: #fff;
+  }
+}
+
+.table-class {
+  &__text {
+    margin-right: 12px;
+  }
+
+  &__img {
+    height: 16px;
+    border: none;
+    background-color: #fff;
+  }
+}
+
+.table-score {
+  &__img {
+    height: 16px;
+    border: none;
     background-color: #fff;
   }
 }

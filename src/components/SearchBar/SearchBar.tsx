@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './SearchBar.scss';
 import { PersonFromServer } from '../../react-app-env';
 import searchButton from './searchbar_logo.svg';
@@ -13,23 +13,24 @@ type Props = {
 export const SearchBar: React.FC<Props> = ({ users, setPeople }) => {
   const [listOfUsers, setListofUsers] = useState('');
 
-  const filterFunc = (user: PersonFromServer) => {
-    let nameFilter = user.name.toLowerCase().includes(listOfUsers.toLowerCase());
-    let idFilter = user.id.toString().toLowerCase().includes(listOfUsers.toLowerCase());
-    let parents = user.parents?.join(', ');
-    let parentFilter = false;
-
-    if(parents) {
-      parentFilter = parents.toLowerCase().includes(listOfUsers.toLowerCase());
-    }
-
-    return nameFilter || idFilter || parentFilter;
-  };
+  const filterFunc = useCallback((user: PersonFromServer) => {
+      let nameFilter = user.name.toLowerCase().includes(listOfUsers.toLowerCase());
+      let idFilter = user.id.toString().toLowerCase().includes(listOfUsers.toLowerCase());
+      let parents = user.parents?.join(', ');
+      let parentFilter = false;
+  
+      if(parents) {
+        parentFilter = parents.toLowerCase().includes(listOfUsers.toLowerCase());
+      }
+  
+      return nameFilter || idFilter || parentFilter;
+    }, [listOfUsers]
+  );
 
   useEffect(() => {
     getPeople()
       .then(response => setPeople(response.data.filter(filterFunc)));
-  }, [ listOfUsers ]);
+  }, [filterFunc, listOfUsers, setPeople]);
   
   const filterTodosByTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
     setListofUsers(event.target.value);
