@@ -47,7 +47,9 @@ export const UserInfoRow:React.FC<Props> = React.memo(({ user, index = 0}) => {
       <td>{user.concept}</td>
       <td>{user.date}</td>
       <td>{user.abcent}</td>
-      <td><input type="checkbox" readOnly /></td>
+      <td>
+        <input type="checkbox" readOnly />
+      </td>
     </tr>
   );
 });

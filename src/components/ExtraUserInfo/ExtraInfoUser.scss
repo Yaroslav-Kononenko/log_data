@@ -90,6 +90,10 @@
     &:hover {
       transform: scale(1.4);
     }
+
+    &:active {
+      transform: scale(1.2);
+    }
   }
 }
 .description__score {

@@ -23,6 +23,12 @@ export const PeopleTable:React.FC<Props> = React.memo(({ people, setPeople, user
       .then(response => setPeople(response.data));
   };
 
+  const sortByID = () => {
+    setSortDir(sortDir  * -1);
+    getPeople(usersRowNumber, usersPage, '')
+      .then(response => setPeople(response.data));
+  };
+
   const sortByClass = () => {
     setSortDir(sortDir  * -1);
     getPeople(usersRowNumber, usersPage, `&sortBy=class&sortDir=${sortDir}`)
@@ -63,7 +69,7 @@ export const PeopleTable:React.FC<Props> = React.memo(({ people, setPeople, user
                 <span className="table-id__text">ID</span>
                 <button 
                   className="table-name__button"
-                  onClick={() => {}}
+                  onClick={sortByID}
                 >
                   <img 
                     className="table-id__img" 
