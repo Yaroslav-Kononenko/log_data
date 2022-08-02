@@ -5,6 +5,7 @@ import { PersonFromServer } from '../../react-app-env';
 import { Pagination } from '../Pagination';
 import { SearchBar } from '../SearchBar';
 import './PeoplePage.scss';
+import { Loader } from '../Loader';
 
 export const PeoplePage:React.FC = React.memo(() => {
   const [people, setPeople] = useState<PersonFromServer[]>([]);
@@ -24,28 +25,32 @@ export const PeoplePage:React.FC = React.memo(() => {
   }, []);
 
   return (
-    <div className="PeoplePage">
-      <SearchBar 
-        users = {people} 
-        setPeople = {setPeople}
-      />
-      <PeopleTable 
-        people={people}
-        setPeople={setPeople}
-        usersRowNumber={usersRowNumber}
-        usersPage={usersPage} 
-        setUsersRowNumber={setUsersRowNumber} 
-        setUsersPage={setUsersPage}
-      />
-      <Pagination 
-        totalPages={totalPages}
-        totalPeople={totalPeople}
-        setPeople={setPeople}
-        usersRowNumber={usersRowNumber}
-        usersPage={usersPage} 
-        setUsersRowNumber={setUsersRowNumber} 
-        setUsersPage={setUsersPage}
-      />
-    </div>
+    people.length > 0 ? (
+      <div className="PeoplePage">
+        <SearchBar 
+          users = {people} 
+          setPeople = {setPeople}
+        />
+        <PeopleTable 
+          people={people}
+          setPeople={setPeople}
+          usersRowNumber={usersRowNumber}
+          usersPage={usersPage} 
+          setUsersRowNumber={setUsersRowNumber} 
+          setUsersPage={setUsersPage}
+        />
+        <Pagination 
+          totalPages={totalPages}
+          totalPeople={totalPeople}
+          setPeople={setPeople}
+          usersRowNumber={usersRowNumber}
+          usersPage={usersPage} 
+          setUsersRowNumber={setUsersRowNumber} 
+          setUsersPage={setUsersPage}
+        />
+      </div>
+    ) : (
+      <Loader />
+    )
   );
 });

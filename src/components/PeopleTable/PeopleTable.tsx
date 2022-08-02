@@ -52,7 +52,7 @@ export const PeopleTable:React.FC<Props> = React.memo(({ people, setPeople, user
       <table className="table">
         <thead className="table__head">
           <tr>
-            <th><input type="checkbox" readOnly /></th>
+            <th><input type="checkbox" name='selectedUser' /></th>
             <th>
               <div className="table-name table-container">
                 <span className="table-name__text">Name</span>
